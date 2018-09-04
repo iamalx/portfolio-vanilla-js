@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Khoa Nguyen">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Reyes</title>
+  <link href="css/main.css" rel="stylesheet">
+ 
+  <style>
+   #pic{
+       display: none;
+       width: 100%;
+       ;
+   }
+  </style>
+</head>
+
+<body>
+  <!-- TITLE -->
+
+ <div class="wrapper">
+   <section class="main">
+   <h1>Alex Reyes</h1>
+   <!-- Intro/ BIO-->
+   <p>I like to play <em>soccer.</em><br>I am learning how to code with JS, HTML and CSS. I am studying business.</p>
+   
+   <h2>Strengths</h2>
+   <ul>
+      <li>Project Management</li>
+      <li>Digital Marketing</li>
+      <li>Creative Problem Solving</li>
+   </ul>
+   
+   <h2>Experience</h2>
+   <ol>
+      <li>JS</li>
+      <li>CSS</li>
+      <li>HTML</li>
+   </ol>
+   
+   <!--<div class="textmodify">-->
+     
+   <!-- </div>-->
+    
+     <div id="bottom"> 
+     </div>
+    
+   </section>
+   
+   <!-- sidebar -->
+   <aside class="sidebar">
+    <p> I have never gone <strong>skydiving!!!!!!!! </strong> </p>
+    <!-- its its own content area-->
+    
+    <p> <img src ="img/cat.jpg" alt= "cat"  id="pic"></p>
+    
+    <div>
+     <a href="https://www.linkedin.com/in/alex-reyes-a32b06153/"> LinkedIn </a>
+    </div>
+  
+    <adress>
+    Alex Reyes<br>
+    Vista CA, USA <br>
+    1(800) 750-0303
+    </adress>
+    <div>
+    <button type= "button" id="button">See my pic </button> 
+    </div>
+    
+    <div>
+    <button  id="alert" onclick="myFunction2()">Leave Page</button>
+    </div>
+   
+  <!--// ENDS: ELEMENT TAG -->
+  </aside>
+</div>
+
+ <script>
+ //------------------------------------------------------------------ 1) add .title
+ var aTag = document.getElementsByTagName("a");
+ aTag.title = "profile";
+ aTag.textConten="dedded";
+ ///aTag.setAttribute(title, "hiiiii");
+//-------------------------------------------------------------- ---- 2)add class to <li>
+ var list = document.getElementsByTagName("li");
+ list[2].className= "thirdLists";
+ var listItem= document.getElementsByTagName("li").item(1);
+ listItem.classList.add("secondList");
+ 
+ //------------------------------------------------------------------ 3) create <div>
+ // var textM = document.getElementsByClassName("textmodify");
+ // console.log(textM);
+ // textM[0].innerHTML= "jbjcbbjj";
+
+  var section = document.getElementsByClassName("main").item(0);
+  var div = document.createElement("div");
+  div.id ="text-modify";
+  div.innerHTML = "vvhh";
+ 
+ section.appendChild(div);
+ 
+//------------------------------------------------------------------- 4) toggle funct
+
+ 
+ document.getElementById("button").addEventListener("click", myFunction);
+ // var port= document.getElementById("bottom");
+ function myFunction() {
+   var x = document.getElementById("pic");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+ }
+ 
+//  var j = document.getElementById("button");
+ 
+//  function myFunction() {
+//     document.querySelector("#portfolio");
+//  }
+//  j.addEventListener("click", myFunction);
+ 
+ //------------------------------------------------------------------- 5) alert
+ 
+ document.getElementById("alert").addEventListener("click", myFunction);
+ function myFunction2() {
+     alert( "Thank you for vieweing my resume");
+ }
+ 
+ // catEl.alt = "Photo of cute cat";
+ //document.body.appendChild(catEl);
+ </script>
+</body>
+</html>
